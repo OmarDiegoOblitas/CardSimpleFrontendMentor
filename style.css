@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /*Primary*/
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  /*Secundary*/
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Pale-blue);
+  background-image: url(./images/pattern-background-desktop.svg);
+}
+main {
+  text-align: center;
+  align-items: center;
+}
+
+/*mobile*/
+.card {
+  width: 375px;
+  overflow: hidden;
+  border-radius: 1rem;
+  font-family: "paragraph", sans-serif;
+}
+img {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+span.title {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+.info {
+  padding: 2rem;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--Very-pale-blue);
+}
+.text {
+  padding: 1.2rem;
+  color: var(--Desaturated-blue);
+}
+.details {
+  padding: 1rem;
+  background: var(--Pale-blue);
+  border-radius: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+.details.plan{
+  padding-left: 20rem;
+}
+.plan span{
+  font-weight:700;
+}
+.plan p{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.btn img{
+  border-radius: 50%;
+  background: var(--Dark-blue);
+}
+.link{
+  padding-top: 1rem;
+}
+button {
+  margin: 0;
+  text-transform: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+button.one {
+  background: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+}
+button.next {
+  background: var(--Very-pale-blue);
+  color: var(--Desaturated-blue);
+  margin-top: 0.5rem;
+}
+/*Desktop*/
+@media screen and (min-width: 1440px) {
+  body{
+    background-image: url(./images/pattern-background-mobile.svg);
+  }
+  main  {
+    width: 1440px;
+    margin-top: 5rem;
+  }
+  .card{
+    display: flex;
+  }
+}
